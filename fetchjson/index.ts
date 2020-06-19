@@ -8,4 +8,10 @@ axios.get(url).then(response => {
   const ID = todo.ID;
   const title = todo.Title;
   const finished = todo.finished;
+
+  console.log(`
+    The Todo with ID: ${ID}
+    Has a title of: ${title}
+    Is it finished? ${finished}
+  `);
 });
