@@ -124,7 +124,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.GOOGLE_MAPS_API_KEY = void 0;
-exports.GOOGLE_MAPS_API_KEY = "AIzaSyBHk4eY1McsAr-JPhIFa4qPhP-wWU2UroY";
+exports.GOOGLE_MAPS_API_KEY = "AIzaSyA_zZCAV2w3HPjha96q7FoJXxq9KIxlyPI";
 },{}],"src/index.ts":[function(require,module,exports) {
 "use strict";
 
