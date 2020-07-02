@@ -139,13 +139,20 @@ var script = document.createElement("script");
 script.src = "https://maps.googleapis.com/maps/api/js?key=" + keys_1.GOOGLE_MAPS_API_KEY + "&callback=initMap";
 script.defer = true;
 script.async = true;
-new google.maps.Map(document.getElementById("map"), {
-  zoom: 1,
-  center: {
-    lat: 0,
-    lng: 0
-  }
-});
+
+window.initMap = function () {
+  // JS API is loaded and available
+  new google.maps.Map(document.getElementById("map"), {
+    zoom: 1,
+    center: {
+      lat: 0,
+      lng: 0
+    }
+  });
+}; // Append the 'script' element to 'head'
+
+
+document.head.appendChild(script);
 },{"./keys":"src/keys.ts"}],"C:/Users/GuRuGu/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
