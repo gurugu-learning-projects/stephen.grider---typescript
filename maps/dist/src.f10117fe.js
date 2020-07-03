@@ -128,8 +128,8 @@ exports.CustomMap = void 0;
 var CustomMap =
 /** @class */
 function () {
-  function CustomMap() {
-    this.googleMap = new google.maps.Map(document.getElementById("map"), {
+  function CustomMap(elementId) {
+    this.googleMap = new google.maps.Map(document.getElementById(elementId), {
       zoom: 1,
       center: {
         lat: 0,
@@ -169,7 +169,7 @@ script.async = true;
 
 window.initMap = function () {
   // JS API is loaded and available
-  new CustomMap_1.CustomMap();
+  new CustomMap_1.CustomMap("map");
 }; // Append the 'script' element to 'head'
 
 

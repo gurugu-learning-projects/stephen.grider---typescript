@@ -11,7 +11,7 @@ script.async = true;
 
 window.initMap = function () {
   // JS API is loaded and available
-  new CustomMap();
+  new CustomMap("map");
 };
 
 // Append the 'script' element to 'head'
