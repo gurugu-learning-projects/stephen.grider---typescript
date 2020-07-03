@@ -117,7 +117,32 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"src/keys.ts":[function(require,module,exports) {
+})({"src/CustomMap.ts":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.CustomMap = void 0;
+
+var CustomMap =
+/** @class */
+function () {
+  function CustomMap() {
+    this.googleMap = new google.maps.Map(document.getElementById("map"), {
+      zoom: 1,
+      center: {
+        lat: 0,
+        lng: 0
+      }
+    });
+  }
+
+  return CustomMap;
+}();
+
+exports.CustomMap = CustomMap;
+},{}],"src/keys.ts":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -133,6 +158,8 @@ Object.defineProperty(exports, "__esModule", {
 }); // import { User } from "./User";
 // import { Company } from "./Company";
 
+var CustomMap_1 = require("./CustomMap");
+
 var keys_1 = require("./keys");
 
 var script = document.createElement("script");
@@ -142,18 +169,12 @@ script.async = true;
 
 window.initMap = function () {
   // JS API is loaded and available
-  new google.maps.Map(document.getElementById("map"), {
-    zoom: 1,
-    center: {
-      lat: 0,
-      lng: 0
-    }
-  });
+  new CustomMap_1.CustomMap();
 }; // Append the 'script' element to 'head'
 
 
 document.head.appendChild(script);
-},{"./keys":"src/keys.ts"}],"C:/Users/GuRuGu/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"./CustomMap":"src/CustomMap.ts","./keys":"src/keys.ts"}],"C:/Users/GuRuGu/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -181,7 +202,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "64275" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52444" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

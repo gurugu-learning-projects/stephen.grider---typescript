@@ -1,4 +1,6 @@
 node_modules
+dist
+.cache
 /maps/.cache
 keys.ts
-/maps/dist
+/maps/dist/*

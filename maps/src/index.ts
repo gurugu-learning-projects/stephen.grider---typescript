@@ -1,5 +1,6 @@
 // import { User } from "./User";
 // import { Company } from "./Company";
+import { CustomMap } from "./CustomMap";
 import { GOOGLE_MAPS_API_KEY } from "./keys";
 
 const script = document.createElement("script");
@@ -10,13 +11,7 @@ script.async = true;
 
 window.initMap = function () {
   // JS API is loaded and available
-  new google.maps.Map(document.getElementById("map"), {
-    zoom: 1,
-    center: {
-      lat: 0,
-      lng: 0,
-    },
-  });
+  new CustomMap();
 };
 
 // Append the 'script' element to 'head'
