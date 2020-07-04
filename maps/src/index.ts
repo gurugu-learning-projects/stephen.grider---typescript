@@ -15,6 +15,7 @@ window.initMap = function () {
   const customMap = new CustomMap("map");
 
   customMap.addUserMarker(user);
+  console.log("object");
 };
 
 // Append the 'script' element to 'head'

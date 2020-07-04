@@ -1,8 +1,5 @@
 node_modules
 keys.ts
-.cache
-*cache
-maps
-/maps/.cache
+
 dist
-/maps/dist/*
+.cache
