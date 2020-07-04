@@ -1,5 +1,5 @@
 import { User } from "./User";
-// import { Company } from "./Company";
+import { Company } from "./Company";
 import { CustomMap } from "./CustomMap";
 import { GOOGLE_MAPS_API_KEY } from "./keys";
 
@@ -12,9 +12,11 @@ script.async = true;
 window.initMap = function () {
   // JS API is loaded and available
   const user = new User();
+  const company = new Company();
   const customMap = new CustomMap("map");
 
   customMap.addUserMarker(user);
+  customMap.addCompanyMarker(company);
   console.log("object");
 };
 
