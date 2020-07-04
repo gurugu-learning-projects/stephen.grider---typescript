@@ -1,4 +1,4 @@
-// import { User } from "./User";
+import { User } from "./User";
 // import { Company } from "./Company";
 import { CustomMap } from "./CustomMap";
 import { GOOGLE_MAPS_API_KEY } from "./keys";
@@ -11,7 +11,10 @@ script.async = true;
 
 window.initMap = function () {
   // JS API is loaded and available
-  new CustomMap("map");
+  const user = new User();
+  const customMap = new CustomMap("map");
+
+  customMap.addUserMarker(user);
 };
 
 // Append the 'script' element to 'head'
