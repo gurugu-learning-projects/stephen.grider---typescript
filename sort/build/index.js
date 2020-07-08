@@ -8,12 +8,15 @@ var Sorter = /** @class */ (function () {
         var length = this.collection.length;
         for (var i = 0; i < length; i++) {
             for (var j = 0; j < length - i - 1; j++) {
+                // If collection is an array of numbers
                 if (this.collection[j] > this.collection[j + 1]) {
                     _a = [
                         this.collection[j + 1],
                         this.collection[j],
                     ], this.collection[j] = _a[0], this.collection[j + 1] = _a[1];
                 }
+                // If collection is a string, do this logic instead:
+                // ~~~logic to compare and swap charaters in a string
             }
         }
     };
