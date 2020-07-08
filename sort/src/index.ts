@@ -1,1 +1,3 @@
-console.log("hi there!");
+class Sorter {
+  constructor(public collection: number[]) {}
+}
