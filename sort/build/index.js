@@ -9,9 +9,10 @@ var Sorter = /** @class */ (function () {
         for (var i = 0; i < length; i++) {
             for (var j = 0; j < length - i - 1; j++) {
                 if (this.collection[j] > this.collection[j + 1]) {
-                    var leftValue = this.collection[j];
-                    var rightValue = this.collection[j + 1];
-                    _a = [rightValue, leftValue], leftValue = _a[0], rightValue = _a[1];
+                    _a = [
+                        this.collection[j + 1],
+                        this.collection[j],
+                    ], this.collection[j] = _a[0], this.collection[j + 1] = _a[1];
                 }
             }
         }
