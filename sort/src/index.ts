@@ -18,6 +18,8 @@ class Sorter {
 
         // If collection is a string, do this logic instead:
         // ~~~logic to compare and swap charaters in a string
+        if (typeof this.collection === "string") {
+        }
       }
     }
   }
