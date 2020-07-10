@@ -8,6 +8,13 @@ var NumbersCollection = /** @class */ (function () {
     NumbersCollection.prototype.compare = function (leftIndex, rightIndex) {
         return this.data[leftIndex] > this.data[rightIndex];
     };
+    NumbersCollection.prototype.swap = function (leftIndex, rightIndex) {
+        var _a;
+        _a = [
+            this.data[rightIndex],
+            this.data[leftIndex],
+        ], this.data[leftIndex] = _a[0], this.data[rightIndex] = _a[1];
+    };
     return NumbersCollection;
 }());
 exports.NumbersCollection = NumbersCollection;
