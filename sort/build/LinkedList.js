@@ -68,6 +68,16 @@ var LinkedList = /** @class */ (function () {
         leftNode.data = rightNode.data;
         rightNode.data = leftHand;
     };
+    LinkedList.prototype.print = function () {
+        if (!this.head) {
+            return;
+        }
+        var node = this.head;
+        while (node) {
+            console.log(node.data);
+            node = node.next;
+        }
+    };
     return LinkedList;
 }());
 exports.LinkedList = LinkedList;
