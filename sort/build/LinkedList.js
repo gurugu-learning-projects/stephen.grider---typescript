@@ -40,6 +40,21 @@ var LinkedList = /** @class */ (function () {
         enumerable: false,
         configurable: true
     });
+    LinkedList.prototype.at = function (index) {
+        if (!this.head) {
+            throw new Error("Index out of bounds");
+        }
+        var counter = 0;
+        var node = this.head;
+        while (node) {
+            if (counter === index) {
+                return node;
+            }
+            counter++;
+            node = node.next;
+        }
+        throw new Error("Index out of bounds");
+    };
     return LinkedList;
 }());
 exports.LinkedList = LinkedList;
