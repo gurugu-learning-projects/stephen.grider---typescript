@@ -17,12 +17,12 @@ var teamWinsHome = function (match, teamName) {
     return match[1] === teamName && match[5] === "H";
 };
 var teamWinsAway = function (match, teamName) {
-    return match[2] === teamName && match[6] === "A";
+    return match[2] === teamName && match[5] === "A";
 };
 for (var _i = 0, matches_1 = matches; _i < matches_1.length; _i++) {
     var match = matches_1[_i];
-    if (teamWinsHome(match, "Man United") && teamWinsAway(match, "Man United")) {
+    if (teamWinsHome(match, "Man United") || teamWinsAway(match, "Man United")) {
         manUnitedWins++;
     }
 }
-console.log(manUnitedWins);
+console.log("Man United won " + manUnitedWins + " games");

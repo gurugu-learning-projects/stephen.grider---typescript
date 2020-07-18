@@ -16,13 +16,13 @@ const teamWinsHome = (match: string[], teamName: string): boolean => {
 };
 
 const teamWinsAway = (match: string[], teamName: string): boolean => {
-  return match[2] === teamName && match[6] === "A";
+  return match[2] === teamName && match[5] === "A";
 };
 
 for (let match of matches) {
-  if (teamWinsHome(match, "Man United") && teamWinsAway(match, "Man United")) {
+  if (teamWinsHome(match, "Man United") || teamWinsAway(match, "Man United")) {
     manUnitedWins++;
   }
 }
 
-console.log(manUnitedWins);
+console.log(`Man United won ${manUnitedWins} games`);
