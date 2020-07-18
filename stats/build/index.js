@@ -14,6 +14,7 @@ var matches = fs_1.default
 });
 var homeWin = "H";
 var awayWin = "A";
+var draw = "D";
 var manUnitedWins = 0;
 var teamWinsHome = function (match, teamName) {
     return match[1] === teamName && match[5] === homeWin;

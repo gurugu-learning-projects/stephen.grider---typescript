@@ -11,6 +11,7 @@ const matches = fs
 
 const homeWin = "H";
 const awayWin = "A";
+const draw = "D";
 
 let manUnitedWins = 0;
 
