@@ -9,14 +9,17 @@ const matches = fs
     return row.split(",");
   });
 
+const homeWin = "H";
+const awayWin = "A";
+
 let manUnitedWins = 0;
 
 const teamWinsHome = (match: string[], teamName: string): boolean => {
-  return match[1] === teamName && match[5] === "H";
+  return match[1] === teamName && match[5] === homeWin;
 };
 
 const teamWinsAway = (match: string[], teamName: string): boolean => {
-  return match[2] === teamName && match[5] === "A";
+  return match[2] === teamName && match[5] === awayWin;
 };
 
 for (let match of matches) {

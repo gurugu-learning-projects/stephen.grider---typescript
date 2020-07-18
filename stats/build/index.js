@@ -12,12 +12,14 @@ var matches = fs_1.default
     .map(function (row) {
     return row.split(",");
 });
+var homeWin = "H";
+var awayWin = "A";
 var manUnitedWins = 0;
 var teamWinsHome = function (match, teamName) {
-    return match[1] === teamName && match[5] === "H";
+    return match[1] === teamName && match[5] === homeWin;
 };
 var teamWinsAway = function (match, teamName) {
-    return match[2] === teamName && match[5] === "A";
+    return match[2] === teamName && match[5] === awayWin;
 };
 for (var _i = 0, matches_1 = matches; _i < matches_1.length; _i++) {
     var match = matches_1[_i];
