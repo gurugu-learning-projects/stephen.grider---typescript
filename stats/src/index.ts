@@ -9,18 +9,20 @@ const matches = fs
     return row.split(",");
   });
 
-const homeWin = "H";
-const awayWin = "A";
-const draw = "D";
+const MatchResult = {
+  HomeWin: "H",
+  AwayWin: "A",
+  Draw: "D",
+};
 
 let manUnitedWins = 0;
 
 const teamWinsHome = (match: string[], teamName: string): boolean => {
-  return match[1] === teamName && match[5] === homeWin;
+  return match[1] === teamName && match[5] === MatchResult.HomeWin;
 };
 
 const teamWinsAway = (match: string[], teamName: string): boolean => {
-  return match[2] === teamName && match[5] === awayWin;
+  return match[2] === teamName && match[5] === MatchResult.AwayWin;
 };
 
 for (let match of matches) {

@@ -12,9 +12,11 @@ var matches = fs_1.default
     .map(function (row) {
     return row.split(",");
 });
-var homeWin = "H";
-var awayWin = "A";
-var draw = "D";
+var MatchResult = {
+    HomeWin: "H",
+    AwayWin: "A",
+    Draw: "D",
+};
 var manUnitedWins = 0;
 var teamWinsHome = function (match, teamName) {
     return match[1] === teamName && match[5] === homeWin;
