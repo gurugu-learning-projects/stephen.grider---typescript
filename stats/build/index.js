@@ -12,17 +12,18 @@ var matches = fs_1.default
     .map(function (row) {
     return row.split(",");
 });
-var MatchResult = {
-    HomeWin: "H",
-    AwayWin: "A",
-    Draw: "D",
-};
+var MatchResult;
+(function (MatchResult) {
+    MatchResult["HomeWin"] = "H";
+    MatchResult["AwayWin"] = "A";
+    MatchResult["Draw"] = "D";
+})(MatchResult || (MatchResult = {}));
 var manUnitedWins = 0;
 var teamWinsHome = function (match, teamName) {
-    return match[1] === teamName && match[5] === homeWin;
+    return match[1] === teamName && match[5] === MatchResult.HomeWin;
 };
 var teamWinsAway = function (match, teamName) {
-    return match[2] === teamName && match[5] === awayWin;
+    return match[2] === teamName && match[5] === MatchResult.AwayWin;
 };
 for (var _i = 0, matches_1 = matches; _i < matches_1.length; _i++) {
     var match = matches_1[_i];
