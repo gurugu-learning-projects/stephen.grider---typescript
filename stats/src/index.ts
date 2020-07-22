@@ -1,16 +1,16 @@
-import { CsvFileReader } from "./CsvFileReader";
+import { MatchData, MatchReader } from "./MatchReader";
 import { MatchResult } from "./MatchResult";
 
-const reader = new CsvFileReader("football.csv");
+const reader = new MatchReader("football.csv");
 reader.read();
 
 let manUnitedWins = 0;
 
-const teamWinsHome = (match: string[], teamName: string): boolean => {
+const teamWinsHome = (match: MatchData, teamName: string): boolean => {
   return match[1] === teamName && match[5] === MatchResult.HomeWin;
 };
 
-const teamWinsAway = (match: string[], teamName: string): boolean => {
+const teamWinsAway = (match: MatchData, teamName: string): boolean => {
   return match[2] === teamName && match[5] === MatchResult.AwayWin;
 };
 
