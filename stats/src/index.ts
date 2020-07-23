@@ -1,4 +1,4 @@
-import { MatchData, MatchReader } from "./MatchReader";
+import { MatchData, MatchReader } from "./inheritance/MatchReader";
 import { MatchResult } from "./MatchResult";
 
 const reader = new MatchReader("football.csv");
