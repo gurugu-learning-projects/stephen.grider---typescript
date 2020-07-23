@@ -1,8 +1,11 @@
-import { MatchData, MatchReader } from "./inheritance/MatchReader";
+import { MatchData, MatchReader } from "./MatchReader";
+import { CsvFileReader } from "./CsvFileReader";
 import { MatchResult } from "./MatchResult";
 
-const reader = new MatchReader("football.csv");
-reader.read();
+const csvFileReader = new CsvFileReader("football.csv");
+
+const matchReader = new MatchReader(csvFileReader);
+matchReader.load();
 
 let manUnitedWins = 0;
 
@@ -14,7 +17,7 @@ const teamWinsAway = (match: MatchData, teamName: string): boolean => {
   return match[2] === teamName && match[5] === MatchResult.AwayWin;
 };
 
-for (let match of reader.data) {
+for (let match of matchReader.matches) {
   if (teamWinsHome(match, "Man United") || teamWinsAway(match, "Man United")) {
     manUnitedWins++;
   }
