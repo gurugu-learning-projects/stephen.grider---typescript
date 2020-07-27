@@ -5,4 +5,3 @@ var CsvFileReader_1 = require("./CsvFileReader");
 var csvFileReader = new CsvFileReader_1.CsvFileReader("football.csv");
 var matchReader = new MatchReader_1.MatchReader(csvFileReader);
 matchReader.load();
-console.log("Man United won " + manUnitedWins + " games");
