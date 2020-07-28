@@ -9,5 +9,5 @@ export interface OutputTarget {
 }
 
 export class Summary {
-  constructor(public analyzer: Analyzer, public outputTarget: OutputTarger) {}
+  constructor(public analyzer: Analyzer, public outputTarget: OutputTarget) {}
 }
