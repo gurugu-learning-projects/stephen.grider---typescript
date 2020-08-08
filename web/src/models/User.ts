@@ -1,4 +1,5 @@
 interface UserProps {
+  id?: number;
   name?: string;
   age?: number;
 }
@@ -6,7 +7,7 @@ interface UserProps {
 type Callback = () => void;
 
 export class User {
-  events: { [key: string]: Callback[]} = {};
+  events: { [key: string]: Callback[] } = {};
 
   constructor(private data: UserProps) {}
 
