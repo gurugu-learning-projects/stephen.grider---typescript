@@ -14,5 +14,5 @@ user.on("save", () => {
 
 user.trigger("change")
 user.trigger("save")
+user.trigger("fsdfsdf")
 
-console.log(user)
