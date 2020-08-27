@@ -24,7 +24,8 @@ export class UserForm {
         <div>User name: ${this.model.get("name")}</div>
         <div>User age: ${this.model.get("age")}</div>
         <input />
-        <button>Click me</button>
+        <button>Click Me</button>
+        <button>Set Random Age</button>
       </div>
     `;
   }
