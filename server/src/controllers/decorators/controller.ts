@@ -3,7 +3,7 @@ import { AppRouter } from "../../AppRouter";
 
 export function controller(routePrefix: string) {
   return function (target: Function) {
-    const router = AppRouter.getInstance();
+    const router = AppRouter.instance;
 
     for (let key in target.prototype) {
       const routeHandler = target.prototype[key];
